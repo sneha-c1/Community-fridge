@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+Community fridge
+{% endblock %}
+{% block body %}
+		<!--welcome-hero start -->
+		<section id="home" class="welcome-hero" style="background-image: url(/static/assets/images/blog/food-clothes-donation-vector-flat-illustration-social-care-charity-concept-volunteer-collect-donations-people-boxes-145047407.jpg);">
+			<div class="container">
+				<div class="welcome-hero-txt">
+					<h2>A Community-Based <br> Solution To Food Waste  </h2>
+					<p>
+						Find avalable foods and clothes and many more think in just One click 
+					</p>
+				</div>
+				
+
+		</section><!--/.welcome-hero-->
+		<!--welcome-hero end -->
+
+		<!--list-topics start -->
+		<section id="list-topics" class="list-topics">
+			<div class="container">
+				<div class="list-topics-content">
+					<ul>
+						<li>
+							<div class="single-list-topics-content">
+								<div class="single-list-topics-icon">
+									
+								</div>
+								<h2><a href="{% url 'fooditems' %}">Available Foods</a></h2>
+								<p>150 listings</p>
+							</div>
+						</li>
+						<li>
+							<div class="single-list-topics-content">
+								<div class="single-list-topics-icon">
+									
+								</div>
+								<h2><a href="{% url 'clotheitems' %}">Available clothes</a></h2>
+								<p>214 listings</p>
+							</div>
+						</li>
+											</ul>
+				</div>
+			</div><!--/.container-->
+
+		</section><!--/.list-topics-->
+		<!--list-topics end-->
+        {% endblock %}    

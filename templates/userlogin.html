@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+Community fridge - Login
+{% endblock %}
+{% block body %}
+		<!--subscription strat -->
+		<section id="contact"  class="subscription">
+			<div class="container">
+				<div class="subscribe-title text-center">
+					<h2>
+						Login here...
+					</h2>
+					<p>
+						{% if messages %}
+                               {% for i in messages %}
+                               <div class="alert alert-danger"><h3>{{i}}</h3></div>
+                               {% endfor %}
+                               {% endif %}
+					</p>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="subscription-input-group">
+							<form action="#" method="POST">
+                                {% csrf_token %}
+                            
+								<input type="email" class="subscription-input-form" placeholder="Enter your email here" name="Email">
+                                <input type="password" class="subscription-input-form" placeholder="Your password" name="password">
+                                
+								<button class="appsLand-btn subscribe-btn" type="submit">
+									Login
+								</button>
+                               
+							</form>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+		</section><!--/subscription-->	
+		<!--subscription end -->
+{% endblock %}

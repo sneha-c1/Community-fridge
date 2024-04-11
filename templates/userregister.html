@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}
+Community fridge - Register
+{% endblock %}
+{% block body %}
+		<!--subscription strat -->
+		<section id="contact"  class="subscription">
+			<div class="container">
+				<div class="subscribe-title text-center">
+					<h2>
+						Register here...
+					</h2>
+					<p>
+						{% if messages %}
+                               {% for i in messages %}
+                               <div class="alert alert-danger"><h3>{{i}}</h3></div>
+                               {% endfor %}
+                               {% endif %}
+					</p>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="subscription-input-group">
+							<form action="#" method="POST">
+                                {% csrf_token %}
+                                <input type="text" class="subscription-input-form" placeholder="Your Name" name="name">
+								<input type="email" class="subscription-input-form" placeholder="Enter your email here" name="Email">
+                                <input type="password" class="subscription-input-form" placeholder="Your password" name="password">
+                                <input type="password" class="subscription-input-form" placeholder="Confirm password" name="cpassword">
+                                <input type="text" class="subscription-input-form" placeholder="Phone Number" name="phone">
+                                <textarea class="subscription-input-form" placeholder="Your Address" rows="5" id="address" name="address"></textarea>
+                                <input type="text" class="subscription-input-form" placeholder="Your Place" name="place">
+								<button class="appsLand-btn subscribe-btn" type="submit">
+									create account
+								</button>
+                               
+							</form>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+		</section><!--/subscription-->	
+		<!--subscription end -->
+{% endblock %}

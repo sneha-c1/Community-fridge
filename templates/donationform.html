@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}
+Community fridge - Donation
+{% endblock %}
+{% block body %}
+	<!--subscription strat -->
+    <section id="contact"  class="subscription">
+        <div class="container">
+            <div class="subscribe-title text-center">
+                <h2>
+                    Donation Form
+                </h2>
+                <p>
+                    {% if messages %}
+                           {% for i in messages %}
+                           <h3>{{i}}</h3>
+                           {% endfor %}
+                           {% endif %}
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="subscription-input-group">
+                        <form action="{% url 'donation' %}" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <input type="text" class="subscription-input-form" value="{{user.EmailID}}" name="name">
+                            <select name="donationtype" id="donationtype" class="subscription-input-form">
+                                <option>Donation Type</option>
+                                <option value="food">Food</option>
+                                <option value="cloth">Cloth</option>
+                            </select>
+                            <input type="text" class="subscription-input-form" placeholder="Donation item" name="item">
+                            <input type="text" class="subscription-input-form" placeholder="Quantity..." name="quantity">
+                            <input type="text" class="subscription-input-form" placeholder="Available place" name="location">
+                            <input type="text" class="subscription-input-form" placeholder="Phone Number" name="phone">
+                            <textarea class="subscription-input-form" placeholder="Description" rows="5" id="address" name="address"></textarea>
+                            <input type="file" class="subscription-input-form" placeholder="Image of your item" name="image" id="image">
+                            <button class="appsLand-btn subscribe-btn" type="submit">
+                                Donate
+                            </button>
+                           
+                        </form>
+                    </div>
+                </div>	
+            </div>
+        </div>
+
+    </section><!--/subscription-->	
+    <!--subscription end -->
+{% endblock %}

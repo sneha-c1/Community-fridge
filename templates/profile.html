@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}
+Community fridge - About us
+{% endblock %}
+{% block body %}
+		<!--blog start -->
+		<section id="blog" class="blog" style="padding-top: 20px;">
+			<div class="container">
+				<div class="section-header">
+					<h2>My profile</h2>
+					<p> </p>
+				</div><!--/.section-header-->
+				<div class="blog-content">
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="/static/assets/images/blog/personal-data.jpg" alt="blog image">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="{% url 'personal' %}">Personal Information</a></h2>
+									
+									<p>
+										
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="/static/assets/images/blog/download.jpg" alt="blog image" style="width:350px;height: 210px;">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="{% url 'donationhistory' %}">Donation   History</a></h2>
+									
+									<p>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="/static/assets/images/blog/da10chz-23082bfb-9fa7-4e01-bb37-984ebbc4d04d.jpg" alt="blog image" style="width:300px;height: 210px;">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="{% url 'requesthistory' %}">Request History</a></h2>
+								
+									<p>
+										
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/.container-->
+			
+		</section><!--/.blog-->
+		<!--blog end -->
+
+{% endblock %}

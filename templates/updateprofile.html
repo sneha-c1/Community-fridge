@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}
+Community fridge - Profile update
+{% endblock %}
+{% block body %}
+		<!--subscription strat -->
+		<section id="contact"  class="subscription">
+			<div class="container">
+				<div class="subscribe-title text-center">
+					<h2>
+						Update your profile...
+					</h2>
+					<p>
+						{% if messages %}
+                               {% for i in messages %}
+                               <h3>{{i}}</h3>
+                               {% endfor %}
+                               {% endif %}
+					</p>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="subscription-input-group">
+							<form action="#" method="POST">
+                                {% csrf_token %}
+                                <input type="text" class="subscription-input-form" value="{{user.Name}}" name="name">
+                                <input type="password" class="subscription-input-form" value="{{user.Password}}" name="password">
+                                <input type="password" class="subscription-input-form" placeholder="Confirm password" name="cpassword">
+                                <input type="text" class="subscription-input-form" value="{{user.Phone}}" name="phone">
+                                <textarea class="subscription-input-form" rows="5" id="address" name="address">{{user.Address}}</textarea>
+                                <input type="text" class="subscription-input-form" value="{{user.Place}}" name="place">
+								<button class="appsLand-btn subscribe-btn" type="submit">
+									update account
+								</button>
+                               
+							</form>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+		</section><!--/subscription-->	
+		<!--subscription end -->
+{% endblock %}

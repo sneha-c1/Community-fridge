@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+Community fridge - Donation
+{% endblock %}
+{% block body %}
+	<!--blog start -->
+    <section id="blog" class="blog" >
+        <div class="container">
+            <div class="section-header">
+                <h2>Available Items</h2>
+                <p> </p>
+            </div><!--/.section-header-->
+            <div class="blog-content">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="single-blog-item">
+                            <div class="single-blog-item-img">
+                                <img src="/static/assets/images/blog/images.jpg" alt="blog image" style="width: 700px;height: 400px;">
+                            </div>
+                            <div class="single-blog-item-txt">
+                                <h2><a href="{% url 'fooditems' %}">Foods</a></h2>
+                                
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="single-blog-item">
+                            <div class="single-blog-item-img">
+                                <img src="/static/assets/images/blog/images (1).jpg" alt="blog image" style="width: 700px;height: 400px;">
+                            </div>
+                            <div class="single-blog-item-txt">
+                                <h2><a href="{% url 'clotheitems' %}">Clothes</a></h2>
+                                
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.container-->
+        
+    </section><!--/.blog-->
+    <!--blog end -->
+{% endblock %}

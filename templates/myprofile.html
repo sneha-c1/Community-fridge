@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+Community fridge - Personal
+{% endblock %}
+{% block body %}
+<!--reviews start -->
+		<section id="reviews" class="reviews" style="padding-top: 20px;">
+			<div class="section-header">
+				<h2>My Profile</h2>
+				<p>This is your personal informations</p>
+			</div><!--/.section-header-->
+			<div class="reviews-content">
+				
+				    <div class="single-testimonial-box"  style="margin-left: 500px;">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="/static/assets/img/149071.png" alt="clients" style="width:100px;height: 100px;">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>{{user.Name}}</h2>
+									<h4>{{user.EmailID}}</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment" style="margin-left: 50px;">
+								<p>
+									Password : {{user.Password}}
+								</p>
+                                <p>Mobile Number : {{user.Phone}}</p>
+                                <p>Address : {{user.Address}}</p>
+                                <p>Place : {{user.Place}}</p>
+							</div><!--/.testimonial-comment-->
+                            <div>
+                                <a href="{% url 'updateprofile' %}"><button class="btn btn-secondary">Update your profile</button></a>
+                            </div>
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+			
+			</div>
+
+		</section><!--/.reviews-->
+        {% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+Community fridge - Donation
+{% endblock %}
+{% block body %}
+		<!--works start -->
+		<section id="works" class="works">
+			<div class="container">
+				<div class="section-header">
+					<h2>Clothes</h2>
+					<p></p>
+				</div><!--/.section-header-->
+				<div class="works-content">
+					<div class="row">
+                        {% for i in item %}
+						<div class="col-md-4 col-sm-6">
+							<div class="single-how-works">
+								<div class="single-how-works-icon">
+                                    <img src="{{i.Pic}}" style="height: 100px;">
+								</div>
+								<h2 style="padding-top: 50px;">{{i.Item}}</h2>
+                                <p>Quantity : {{i.Quantity}}</p>
+                                <p>Description : {{i.Description}}</p>
+                                <p>Location : {{i.Location}}</p>
+                                <p>Contact_no : {{i.Contact_no}}</p>
+                                <p>Status : {{i.Status}}</p>
+                                
+                                <a href="{% url 'requestitem' %}">
+								<button class="welcome-hero-btn how-work-btn">
+									Request
+								</button></a>
+							</div>
+						</div>
+                        {% endfor %}
+						
+						
+					</div>
+				</div>
+			</div><!--/.container-->
+		
+		</section><!--/.works-->
+		<!--works end -->
+{% endblock %}
